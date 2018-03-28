@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('phone-store-web App', () => {
+describe('brickfy-web App', () => {
   let page: AppPage;
 
   beforeEach(() => {
