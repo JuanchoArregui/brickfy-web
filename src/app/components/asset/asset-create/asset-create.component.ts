@@ -1,45 +1,45 @@
-import { PhonesService } from './../../../shared/services/phones.service';
-import { Phone } from './../../../shared/model/phone.model';
+import { AssetsService } from './../../../shared/services/assets.service';
+import { Asset } from './../../../shared/model/asset.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-phone-create',
-  templateUrl: './phone-create.component.html',
-  styleUrls: ['./phone-create.component.css']
+  selector: 'app-asset-create',
+  templateUrl: './asset-create.component.html',
+  styleUrls: ['./asset-create.component.css']
 })
-export class PhoneCreateComponent {
-  phone: Phone = new Phone();
+export class AssetCreateComponent {
+  asset: Asset = new Asset();
   apiError: string;
   @ViewChild('imageFile') imageFile;
-  @ViewChild('phoneForm') phoneForm;
+  @ViewChild('assetForm') assetForm;
 
   constructor(
     private router: Router,
-    private phonesService: PhonesService) {}
+    private assetsService: AssetsService) {}
 
 
   addSpec(spec: HTMLInputElement) {
     if (spec.value) {
-      this.phone.specs.push(spec.value);
+      this.asset.specs.push(spec.value);
       spec.value = '';
     }
   }
 
   removeSpec(spec: string) {
-    this.phone.specs = this.phone.specs.filter(s => s !== spec);
+    this.asset.specs = this.asset.specs.filter(s => s !== spec);
   }
 
-  onSubmitPhone(phoneForm: NgForm) {
+  onSubmitasset(assetForm: NgForm) {
     const imageFile = this.imageFile.nativeElement;
     if (imageFile.files && imageFile.files[0]) {
-      this.phone.image = imageFile.files[0];
-      this.phonesService.create(this.phone)
+      this.asset.image = imageFile.files[0];
+      this.assetsService.create(this.asset)
         .subscribe(
-          (phone) => {
-            phoneForm.reset();
-            this.router.navigate(['/phones']);
+          (asset) => {
+            assetForm.reset();
+            this.router.navigate(['/assets']);
           },
           (error) => {
             this.apiError = error;
@@ -49,7 +49,7 @@ export class PhoneCreateComponent {
   }
 
   canLeaveTheComponent(): boolean {
-    if (this.phoneForm.dirty) {
+    if (this.assetForm.dirty) {
       return window.confirm(`
         Unsaved changes.
         Are you sure you want to leave?

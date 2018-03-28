@@ -1,6 +1,6 @@
 import { GlobalErrorHandlerService } from './shared/services/global-error-handler.service';
-import { CanLeavePhoneCreateGuard } from './shared/guards/can-leave-phone-create.guard';
-import { PhoneDetailsResolverGuard } from './shared/resolvers/phone-details-resolver.guard';
+import { CanLeaveAssetCreateGuard } from './shared/guards/can-leave-asset-create.guard';
+import { AssetDetailsResolverGuard } from './shared/resolvers/asset-details-resolver.guard';
 import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -11,29 +11,29 @@ import { RouterModule } from '@angular/router';
 import './rxjs.operators';
 
 import { AppComponent } from './app.component';
-import { PhoneListComponent } from './components/phone/phone-list/phone-list.component';
-import { PhonesService } from './shared/services/phones.service';
+import { AssetListComponent } from './components/asset/asset-list/asset-list.component';
+import { AssetsService } from './shared/services/assets.service';
 import { SessionService } from './shared/services/session.service';
 import { routes } from './app.routes';
-import { PhoneItemComponent } from './components/phone/phone-item/phone-item.component';
+import { AssetItemComponent } from './components/asset/asset-item/asset-item.component';
 import { LoginComponent } from './components/misc/login/login.component';
 import { NavbarComponent } from './components/misc/navbar/navbar.component';
 import { SignupComponent } from './components/misc/signup/signup.component';
-import { UsersService } from './shared/services/users.service';
-import { PhoneCreateComponent } from './components/phone/phone-create/phone-create.component';
-import { PhoneBaseComponent } from './components/phone/phone-base/phone-base.component';
+import { ParticipantsService } from './shared/services/participants.service';
+import { AssetCreateComponent } from './components/asset/asset-create/asset-create.component';
+import { AssetBaseComponent } from './components/asset/asset-base/asset-base.component';
 import { IndexComponent } from './components/misc/index/index.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhoneListComponent,
-    PhoneItemComponent,
+    AssetListComponent,
+    AssetItemComponent,
     LoginComponent,
     NavbarComponent,
     SignupComponent,
-    PhoneCreateComponent,
-    PhoneBaseComponent,
+    AssetCreateComponent,
+    AssetBaseComponent,
     IndexComponent
   ],
   imports: [
@@ -43,12 +43,12 @@ import { IndexComponent } from './components/misc/index/index.component';
     RouterModule.forRoot(routes)
   ],
   providers: [
-    PhonesService,
+    AssetsService,
     SessionService,
-    UsersService,
+    ParticipantsService,
     IsAuthenticatedGuard,
-    PhoneDetailsResolverGuard,
-    CanLeavePhoneCreateGuard,
+    AssetDetailsResolverGuard,
+    CanLeaveAssetCreateGuard,
     {
       provide: ErrorHandler,
       useClass: GlobalErrorHandlerService

@@ -1,6 +1,6 @@
-import { UsersService } from './../../../shared/services/users.service';
+import { ParticipantsService } from './../../../shared/services/participants.service';
 import { Router } from '@angular/router';
-import { User } from './../../../shared/model/user.model';
+import { Participant } from './../../../shared/model/participant.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,16 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  user: User = new User();
+  participant: Participant = new Participant();
   apiError: string;
 
   constructor(
     private router: Router,
-    private usersService: UsersService
+    private usersService: ParticipantsService
   ) {}
 
   onSubmitSignup(signupForm) {
-    this.usersService.create(this.user).subscribe(
+    this.usersService.create(this.participant).subscribe(
       (user) => {
         signupForm.reset();
         this.router.navigate(['/login']);

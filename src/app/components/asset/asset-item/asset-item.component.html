@@ -1,0 +1,18 @@
+<div *ngIf="asset">
+  <div class="asset-thumbnail">
+    <img height="300" [src]="asset.image" />
+  </div>
+
+  <div class="asset-info">
+    <h2> {{ asset.owner }}</h2>
+    <h3> {{ asset.value }} </h3>
+
+    <div *ngIf="asset.specs.length">
+      <h4> Features </h4>
+      <ul>
+        <li *ngFor="let spec of asset.specs"> {{ spec }} </li>
+      </ul>
+    </div>
+    <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
+  </div>
+</div>

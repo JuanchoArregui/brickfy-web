@@ -1,0 +1,11 @@
+<a [routerLink]="['/assets/new']">
+  <i class="fa fa-plus"></i>
+</a>
+<div class="row">
+  <div *ngFor="let asset of assets" class="asset col-xs-12 col-sm-3">
+    <img [src]="asset.image" />
+    <h3> {{ asset.owner }} </h3>
+    <p> {{ asset.value }} </p>
+    <a [routerLink]="['/assets', asset.id]"> View Details </a>
+  </div>
+</div>
