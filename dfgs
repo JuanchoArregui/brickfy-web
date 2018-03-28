@@ -1,0 +1,144 @@
+[33mcommit 54f141fd1743e1c34bbfcf152194a770813586c8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: JuanchoArregui <juan.arregui.lopez@gmail.com>
+Date:   Wed Mar 28 11:26:09 2018 +0200
+
+    Just starting. Changed name and favicon
+
+[33mcommit c7ef5e1df62aab66a6d024aaa63062543cd413ac[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Sat Mar 24 10:07:02 2018 +0100
+
+    feat: redirect to login with error handler
+
+[33mcommit bfea612b5e66eb8b3f166098fae4f329c1fcd12f[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Fri Mar 23 23:37:45 2018 +0100
+
+    chore: ngh script
+
+[33mcommit a9d942d2ad9449852a6d828aaa8361e2e5b7d1b7[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Fri Mar 23 23:26:41 2018 +0100
+
+    fix: some production fixes
+
+[33mcommit 135ad3ad1b1fe08649eca913b3c9f0a1ed3eb218[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 03:09:07 2018 +0100
+
+    chore: version bumo to 0.2.0
+
+[33mcommit 7e532f564708140d4ac7687e88e3b219aaa660aa[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 02:47:09 2018 +0100
+
+    feat: can deativate create phone guard
+
+[33mcommit 213c8f1ef5e27d019e78d5630aa907349984ace4[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 02:20:18 2018 +0100
+
+    feat: create phone
+
+[33mcommit e7a847322ed81e32f4d916bfa9f86ff8b2446c39[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 03:08:32 2018 +0100
+
+    feat: use subjects to improve component data loading
+
+[33mcommit 7edbcac84bc2c495ccb8e1dc648ca337aa600584[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 02:58:47 2018 +0100
+
+    feat: show user at navbar
+
+[33mcommit 876fac06ae0305efc93fce9e3e5b6bfa842c5681[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 00:45:06 2018 +0100
+
+    feat: is authenticated guard & phone resolver
+
+[33mcommit 050e4e228a549a551e166d7f9ca12784bdfe5afd[m[33m ([m[1;33mtag: 0.1.0[m[33m)[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 00:20:11 2018 +0100
+
+    chore: version bump
+
+[33mcommit a2ae985b579c33e8c93955e4c8b3d51905f59265[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 00:18:20 2018 +0100
+
+    feat: phone list & item styles
+
+[33mcommit 17412d67d5815586d1b291fa851fabc73105961f[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Thu Mar 22 00:08:07 2018 +0100
+
+    feat: user signup
+
+[33mcommit 88eced1916225637d67120f83653022e676b5db0[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Wed Mar 21 23:21:55 2018 +0100
+
+    feat: login validations & styles
+
+[33mcommit edd5fc4992b91f7d372a314936695d79df09cf1b[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Wed Mar 21 22:57:55 2018 +0100
+
+    feat: navbar with logout
+
+[33mcommit e8254fc2d8e40516607fc95a3adf6b42b0c1ba48[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Wed Mar 21 22:26:19 2018 +0100
+
+    feat: auth fixes
+
+[33mcommit ca26bdccbd7fa7c9dec741ff9726b4491559d621[m
+Author: Julio García Pérez <juliojose.garcia@11paths.com>
+Date:   Tue Mar 13 20:37:34 2018 +0100
+
+    feat: add auth
+
+[33mcommit 830f7e24aa9354125298a148213110560f4cb6a6[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Sun Mar 11 20:20:47 2018 +0100
+
+    feat: phone list styles
+
+[33mcommit 9508c7b418706e5949d65f8ea694a8fad8ef73a4[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Sun Mar 11 20:07:28 2018 +0100
+
+    feat: phone details component
+
+[33mcommit 2270ab0bc57e6e428c5219d85b0165fc87c94a67[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Sun Mar 11 19:53:39 2018 +0100
+
+    feat: phone list component
+
+[33mcommit 2427b2f5eae4bc0264d3f2a491c75be0ea24b44d[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Sun Mar 11 19:47:51 2018 +0100
+
+    feat: phones service
+
+[33mcommit d24e0ae60ce972b002c17aaaa3f9823abb9d8bae[m
+Author: Carlos del Prado <carlos.delprado@11paths.com>
+Date:   Sun Mar 11 19:46:05 2018 +0100
+
+    feat: phone model
+
+[33mcommit eb193cee0dbbdfb03eea63b710038f40b21c7576[m
+Author: Angular CLI <angular-cli@angular.io>
+Date:   Fri Mar 9 23:54:21 2018 +0100
+
+    chore: initial commit from @angular/cli
+    
+        _                      _                 ____ _     ___
+       / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
+      / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
+     / ___ \| | | | (_| | |_| | | (_| | |      | |___| |___ | |
+    /_/   \_\_| |_|\__, |\__,_|_|\__,_|_|       \____|_____|___|
+                   |___/

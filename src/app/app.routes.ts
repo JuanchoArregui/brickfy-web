@@ -3,6 +3,7 @@ import { PhoneBaseComponent } from './components/phone/phone-base/phone-base.com
 import { PhoneCreateComponent } from './components/phone/phone-create/phone-create.component';
 import { PhoneDetailsResolverGuard } from './shared/resolvers/phone-details-resolver.guard';
 import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
+import { IndexComponent } from './components/misc/index/index.component';
 import { SignupComponent } from './components/misc/signup/signup.component';
 import { LoginComponent } from './components/misc/login/login.component';
 import { PhoneItemComponent } from './components/phone/phone-item/phone-item.component';
@@ -10,7 +11,7 @@ import { PhoneListComponent } from './components/phone/phone-list/phone-list.com
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'phones', pathMatch: 'full'},
+    { path: '', component: IndexComponent},
     { path: 'phones', canActivate: [IsAuthenticatedGuard], component: PhoneListComponent},
     {
         path: 'phones',

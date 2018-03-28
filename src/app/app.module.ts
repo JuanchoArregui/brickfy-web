@@ -22,6 +22,7 @@ import { SignupComponent } from './components/misc/signup/signup.component';
 import { UsersService } from './shared/services/users.service';
 import { PhoneCreateComponent } from './components/phone/phone-create/phone-create.component';
 import { PhoneBaseComponent } from './components/phone/phone-base/phone-base.component';
+import { IndexComponent } from './components/misc/index/index.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PhoneBaseComponent } from './components/phone/phone-base/phone-base.com
     NavbarComponent,
     SignupComponent,
     PhoneCreateComponent,
-    PhoneBaseComponent
+    PhoneBaseComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
