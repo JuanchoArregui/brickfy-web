@@ -6,18 +6,26 @@
         <!-- Sidebar Header -->
         <div class="sidebar-header">
             <a class="navbar-brand" [routerLink]="['/']">
-              <span>Brickfy</span>
-              <img class="logo-sidebar" alt="Logo" src="./assets/img/Brickfy_logo_white_padding.svg">
+              <span class="logo">Brickfy</span>
+              <img class="logo" alt="Logo" src="./assets/img/Brickfy_logo_white_padding.svg">
             </a>
         </div>
 
         <!-- Sidebar Links -->
         <ul class="list-unstyled components">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
+            <li class="active"><a href="#"><i class="fas fa-address-book"></i> My profile</a></li>
+            <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i> Settings</a></li>
+            <li><a href="#"><i class="fas fa-cubes"></i> Market Place</a></li>
+            <li><a href="#"><i class="fas fa-gavel"></i> Secondary Market</a></li>
+            
+            <li><a href="#"><i class="fas fa-briefcase"></i> My Wallet</a></li>
+            <li><a href="#"><i class="far fa-chart-bar"></i> Dashboard</a></li>
+            <li><a href="#"><i class="fas fa-chart-line"></i> Stats 1</a></li>
+            <li><a href="#"><i class="fas fa-chart-pie"></i> Stats 2</a></li>
+            <li><a href="#"><i class="fab fa-cc-paypal"></i> PayPal</a></li>
+
+
             <li>
               <a (click)="onClickLogout()">Logout</a>
             </li>
@@ -25,9 +33,9 @@
             <li><!-- Link with dropdown items -->
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
+                    <li><a href="#"><i class="fab fa-docker"></i> Docker</a></li>
+                    <li><a href="#"><i class="fas fa-link"></i> BlockChain</a></li>
+                    <li><a href="#">HyperLedger</a></li>
                 </ul>
 
             <li><a href="#">Portfolio</a></li>

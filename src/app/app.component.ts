@@ -8,7 +8,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit, OnDestroy{
+export class AppComponent implements OnInit, OnDestroy {
   participant: Participant;
   participantSubscription: Subscription;
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
 
   ngOnInit() {
-    console.log("se activa ngOnInit");
+    console.log('se activa ngOnInit');
     console.log(this);
     console.log(this.participant);
     this.participant = this.sessionService.getParticipant();
