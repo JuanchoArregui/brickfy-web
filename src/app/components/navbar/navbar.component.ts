@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
   onClickLogout() {
     this.sessionService.logout()
       .subscribe(() => {
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
       });
   }
 

@@ -1,5 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+@import "https://fonts.googleapis.com/css?family=Roboto";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: lightblue;
+    color: red;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: rgb(77, 75, 75);
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+
+
+
+
 .control-label ul {
     padding: 0;
     list-style: none;
