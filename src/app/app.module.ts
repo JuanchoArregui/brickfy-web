@@ -16,13 +16,14 @@ import { AssetsService } from './shared/services/assets.service';
 import { SessionService } from './shared/services/session.service';
 import { routes } from './app.routes';
 import { AssetItemComponent } from './components/asset/asset-item/asset-item.component';
-import { LoginComponent } from './components/misc/login/login.component';
-import { NavbarComponent } from './components/misc/navbar/navbar.component';
-import { SignupComponent } from './components/misc/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { ParticipantsService } from './shared/services/participants.service';
 import { AssetCreateComponent } from './components/asset/asset-create/asset-create.component';
 import { AssetBaseComponent } from './components/asset/asset-base/asset-base.component';
-import { IndexComponent } from './components/misc/index/index.component';
+import { IndexComponent } from './components/index/index.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { IndexComponent } from './components/misc/index/index.component';
     SignupComponent,
     AssetCreateComponent,
     AssetBaseComponent,
-    IndexComponent
+    IndexComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

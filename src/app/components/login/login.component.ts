@@ -1,6 +1,6 @@
-import { SessionService } from './../../../shared/services/session.service';
+import { SessionService } from './../../shared/services/session.service';
 import { print } from 'util';
-import { Participant } from './../../../shared/model/participant.model';
+import { Participant } from './../../shared/model/participant.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

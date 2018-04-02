@@ -1,6 +1,6 @@
-import { ParticipantsService } from './../../../shared/services/participants.service';
+import { ParticipantsService } from './../../shared/services/participants.service';
 import { Router } from '@angular/router';
-import { Participant } from './../../../shared/model/participant.model';
+import { Participant } from './../../shared/model/participant.model';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
