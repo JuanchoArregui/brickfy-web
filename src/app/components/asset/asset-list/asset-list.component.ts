@@ -16,7 +16,7 @@ export class AssetListComponent implements OnInit {
 
   ngOnInit() {
     this.assetsService.list()
-      .subscribe((asset) => this.asset = asset);
+      .subscribe((assets) => this.assets = assets);
   }
 
 }

@@ -13,7 +13,7 @@ export class BaseApiService {
 
   protected handleError(error: Response | any): Observable<any> {
     if (!environment.production) {
-      console.error(`${this.constructor.name} error: ${error}`);
+      console.error(`${this.constructor.name} error at environment.production: ${error}`);
     }
     const errorData = error.json();
     errorData.status = error.status;

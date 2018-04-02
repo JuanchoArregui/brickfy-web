@@ -14,11 +14,11 @@ export class SignupComponent {
 
   constructor(
     private router: Router,
-    private usersService: ParticipantsService
+    private participantsService: ParticipantsService
   ) {}
 
   onSubmitSignup(signupForm) {
-    this.usersService.create(this.participant).subscribe(
+    this.participantsService.create(this.participant).subscribe(
       (user) => {
         signupForm.reset();
         this.router.navigate(['/login']);

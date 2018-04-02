@@ -1,6 +1,6 @@
 import { SessionService } from './../../../shared/services/session.service';
 import { print } from 'util';
-import { User } from './../../../shared/model/user.model';
+import { Participant } from './../../../shared/model/participant.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: User = new User();
+  user: Participant = new Participant();
   apiError: string;
+  
 
   constructor(
     private sessionService: SessionService,
@@ -21,12 +22,14 @@ export class LoginComponent implements OnInit {
   ngOnInit() { }
 
   onSubmitLogin(loginForm) {
+    console.log(this.user);
     this.sessionService.authenticate(this.user).subscribe(
       (user) => {
         loginForm.reset();
         this.router.navigate(['/assets']);
       },
       (error) => {
+        console.log("hola caracola");
         this.apiError = error.message;
       }
     );

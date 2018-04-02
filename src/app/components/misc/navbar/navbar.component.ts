@@ -1,5 +1,5 @@
 import { Observable, Subscription } from 'rxjs/Rx';
-import { User } from './../../../shared/model/user.model';
+import { Participant } from './../../../shared/model/participant.model';
 import { SessionService } from './../../../shared/services/session.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
@@ -10,21 +10,21 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit, OnDestroy {
-  user: User;
-  userSubscription: Subscription;
+  participant: Participant;
+  participantSubscription: Subscription;
 
   constructor(
     private router: Router,
     private sessionService: SessionService) { }
 
   ngOnInit() {
-    this.user = this.sessionService.getUser();
-    this.userSubscription = this.sessionService.onUserChanges()
-      .subscribe(user => this.user = user);
+    this.participant = this.sessionService.getParticipant();
+    this.participantSubscription = this.sessionService.onParticipantChanges()
+      .subscribe(participant => this.participant = participant);
   }
 
   ngOnDestroy() {
-    this.userSubscription.unsubscribe();
+    this.participantSubscription.unsubscribe();
   }
 
   onClickLogout() {

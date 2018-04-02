@@ -8,7 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './asset-item.component.html',
   styleUrls: ['./asset-item.component.css']
 })
-export class assetItemComponent implements OnInit {
+export class AssetItemComponent implements OnInit {
   asset: Asset = new Asset();
   error: Object;
 

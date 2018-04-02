@@ -1,29 +1,30 @@
 import { BaseApiService } from './base-api.service';
-import { User } from './../model/user.model';
+import { Participant } from './../model/participant.model';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs/Rx';
 
-const CURRENT_USER_KEY = 'currentUser';
+const CURRENT_PARTICIPANT_KEY = 'currentParticipant';
 
 @Injectable()
 export class SessionService extends BaseApiService {
   private static readonly SESSION_API = `${BaseApiService.BASE_API}/session`;
 
-  private user: User;
-  private userSubject: Subject<User> = new Subject();
+  private participant: Participant;
+  private participantSubject: Subject<Participant> = new Subject();
 
   constructor(private http: Http) {
     super();
-    this.user = JSON.parse(localStorage.getItem(CURRENT_USER_KEY));
-    this.notifyUserChanges();
+    this.participant = JSON.parse(localStorage.getItem(CURRENT_PARTICIPANT_KEY));
+    this.notifyParticipantChanges();
   }
 
-  authenticate(user: User): Observable<User> {
-    return this.http.post(SessionService.SESSION_API, JSON.stringify(user), BaseApiService.defaultOptions)
+  authenticate(participant: Participant): Observable<Participant> {
+    
+    return this.http.post(SessionService.SESSION_API, JSON.stringify(participant), BaseApiService.defaultOptions)
       .map(res => {
-        return this.doAuthentication(res.json());
+        return this.doAuthentication(participant); //res.json()
       })
       .catch(error => this.handleError(error));
   }
@@ -37,32 +38,32 @@ export class SessionService extends BaseApiService {
   }
 
   isAuthenticated(): boolean {
-    return this.user ? true : false;
+    return this.participant ? true : false;
   }
 
-  getUser(): User {
-    return this.user;
+  getParticipant(): Participant {
+    return this.participant;
   }
 
-  onUserChanges(): Observable<User> {
-    return this.userSubject.asObservable();
+  onParticipantChanges(): Observable<Participant> {
+    return this.participantSubject.asObservable();
   }
 
-  private doAuthentication(user: User): User {
-    this.user = user;
-    localStorage.setItem(CURRENT_USER_KEY, JSON.stringify(this.user));
-    this.notifyUserChanges();
-    return this.user;
+  private doAuthentication(participant: Participant): Participant {
+    this.participant = participant;
+    localStorage.setItem(CURRENT_PARTICIPANT_KEY, JSON.stringify(this.participant));
+    this.notifyParticipantChanges();
+    return this.participant;
   }
 
   protected doLogout(): void {
-    this.user = null;
-    localStorage.removeItem(CURRENT_USER_KEY);
-    this.notifyUserChanges();
+    this.participant = null;
+    localStorage.removeItem(CURRENT_PARTICIPANT_KEY);
+    this.notifyParticipantChanges();
   }
 
-  private notifyUserChanges() {
-    this.userSubject.next(this.user);
+  private notifyParticipantChanges() {
+    this.participantSubject.next(this.participant);
   }
 
 }
