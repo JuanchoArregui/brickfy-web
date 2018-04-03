@@ -14,7 +14,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: red;
+    color: rgb(70, 70, 70);
 }
 
 a, a:hover, a:focus {

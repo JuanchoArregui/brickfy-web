@@ -24,6 +24,8 @@ import { AssetCreateComponent } from './components/asset/asset-create/asset-crea
 import { AssetBaseComponent } from './components/asset/asset-base/asset-base.component';
 import { IndexComponent } from './components/index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { ParticipantProfileComponent } from './components/participant/participant-profile/participant-profile.component';
+import { ParticipantListComponent } from './components/participant/participant-list/participant-list.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     AssetCreateComponent,
     AssetBaseComponent,
     IndexComponent,
-    SidebarComponent
+    SidebarComponent,
+    ParticipantProfileComponent,
+    ParticipantListComponent
   ],
   imports: [
     BrowserModule,

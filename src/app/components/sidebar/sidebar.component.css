@@ -11,6 +11,7 @@
 .wrapper {
     display: flex;
     align-items: stretch;
+    float: left;
 }        
 
 /* Sidebar Header */
@@ -49,7 +50,7 @@
 /* Sidebar Menu */
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    border-bottom: 1px solid white;
 }
 
 #sidebar ul p {
@@ -61,15 +62,16 @@
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    color: white;
 }
 #sidebar ul li a:hover {
-    color: rgb(73, 218, 25);
+    color: #3086E9;
     background: #fff;
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: pink;
 }
 ul ul a {
     font-size: 0.9em !important;

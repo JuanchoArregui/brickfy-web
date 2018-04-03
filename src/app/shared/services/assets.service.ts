@@ -1,6 +1,5 @@
 import { BaseApiService } from './base-api.service';
 import { Asset } from '../model/asset.model';
-import { environment } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response, RequestMethod } from '@angular/http';
 import { Observable } from 'rxjs/Rx';

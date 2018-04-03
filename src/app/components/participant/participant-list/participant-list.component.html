@@ -1,0 +1,24 @@
+<p>
+  participant-list works!
+</p>
+
+<div >
+
+  <div *ngFor="let participant of participants" class="row" >
+    <div class="asset col-xs-12 col-sm-3">
+
+        <img [src]="participant.image" />
+        <h3> {{ participant.firstName }} </h3>
+        <h3> {{ participant.lastName }} </h3>
+        <p> {{ participant.email }} </p>
+        <p> {{ participant.vatIdNumber }} </p>
+        <p> {{ participant.description }} </p>
+        <p> {{ participant.address }} </p>
+        <p> {{ participant.roll }} </p>
+
+        <a [routerLink]="['/participants', asset.id]"> Edit Profile </a>
+      
+    </div> 
+  </div>
+
+</div>

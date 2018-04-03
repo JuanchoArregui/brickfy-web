@@ -9,5 +9,4 @@ export class Participant {
     image: string;
     address: Array<string> = new Array();
     roll: string;
-    
 }
