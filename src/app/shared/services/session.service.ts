@@ -9,7 +9,7 @@ const CURRENT_PARTICIPANT_KEY = 'currentParticipant';
 
 @Injectable()
 export class SessionService extends BaseApiService {
-  private static readonly SESSION_API = `${BaseApiService.BASE_API}/session`;
+  private readonly SESSION_API = `${BaseApiService.BASE_API}/session`;
 
   private participant: Participant;
   private participantSubject: Subject<Participant> = new Subject();
@@ -21,16 +21,18 @@ export class SessionService extends BaseApiService {
   }
 
   authenticate(participant: Participant): Observable<Participant> {
-    
-    return this.http.post(SessionService.SESSION_API, JSON.stringify(participant), BaseApiService.defaultOptions)
+    return this.http.post(this.SESSION_API, JSON.stringify(participant), BaseApiService.defaultOptions)
       .map(res => {
-        return this.doAuthentication(participant); //res.json()   ??????????????????????????????????????????????????
+        console.log('entrando en session.service authenticate');
+        console.log('imprimiendo res:');
+        console.log(res);
+        return this.doAuthentication(res.json()); // participant <-->  res.json() ?????????????????????????????????????????????????
       })
       .catch(error => this.handleError(error));
   }
 
   logout(): Observable<void> {
-    return this.http.delete(SessionService.SESSION_API, BaseApiService.defaultOptions)
+    return this.http.delete(this.SESSION_API, BaseApiService.defaultOptions)
       .map(res => {
         return this.doLogout();
       })
@@ -50,6 +52,7 @@ export class SessionService extends BaseApiService {
   }
 
   private doAuthentication(participant: Participant): Participant {
+    console.log('entrando en DOauthenticate');
     this.participant = participant;
     localStorage.setItem(CURRENT_PARTICIPANT_KEY, JSON.stringify(this.participant));
     this.notifyParticipantChanges();

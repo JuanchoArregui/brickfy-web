@@ -7,7 +7,7 @@
               <span class="input-group-addon">
                 <i class="fa fa-user"></i>
               </span>
-              <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" #email="ngModel" required email>
+              <input type="text" name="email" class="form-control" placeholder="Email" [(ngModel)]="participant.email" #email="ngModel" required email>
             </div>
             <label class="control-label" *ngIf="email.errors && email.touched">
               <ul>
@@ -22,7 +22,7 @@
               <span class="input-group-addon">
                 <i class="fa fa-lock"></i>
               </span>
-              <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" #password="ngModel" required>
+              <input type="password" name="password" class="form-control" placeholder="Password" [(ngModel)]="participant.password" #password="ngModel" required>
             </div>
             <label class="control-label" *ngIf="password.errors && password.touched">
               <ul>

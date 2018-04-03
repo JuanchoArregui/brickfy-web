@@ -10,9 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: Participant = new Participant();
+  participant: Participant = new Participant();
   apiError: string;
-  
 
   constructor(
     private sessionService: SessionService,
@@ -22,14 +21,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() { }
 
   onSubmitLogin(loginForm) {
-    console.log(this.user);
-    this.sessionService.authenticate(this.user).subscribe(
-      (user) => {
+    console.log('Este es el participante que entra en onSubmitLogin ');
+    console.log(this.participant);
+    this.sessionService.authenticate(this.participant).subscribe(
+      (participant) => {
         loginForm.reset();
-        this.router.navigate(['/assets']);
+        this.router.navigate([`/participants/${participant.id}`]);
       },
       (error) => {
-        console.log("hola caracola");
+        console.log('Este es el error de onSubmitLogin ');
         this.apiError = error.message;
       }
     );

@@ -9,7 +9,7 @@ export class Asset {
         const data = new FormData();
         data.append('owner', this.owner);
         data.append('value', this.value);
-        for (let spec of this.specs) {
+        for (const spec of this.specs) {
             data.append('specs', spec);
         }
 

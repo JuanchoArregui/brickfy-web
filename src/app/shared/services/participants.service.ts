@@ -26,4 +26,12 @@ export class ParticipantsService extends BaseApiService {
       .catch(error => this.handleError(error));
   }
 
+
+  edit(participant: Participant): Observable<Participant> {
+    return this.http.put(`AssetsService.PARTICIPANT_API/${participant.id}`, participant.asFormData(),
+    new RequestOptions({ withCredentials: true }))
+      .map((res: Response) => res.json())
+      .catch(error => this.handleError(error));
+  }
+
 }
