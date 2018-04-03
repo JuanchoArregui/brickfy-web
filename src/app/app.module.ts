@@ -26,6 +26,7 @@ import { IndexComponent } from './components/index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { ParticipantProfileComponent } from './components/participant/participant-profile/participant-profile.component';
 import { ParticipantListComponent } from './components/participant/participant-list/participant-list.component';
+import { ParticipantBaseComponent } from './components/participant/participant-base/participant-base.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ParticipantListComponent } from './components/participant/participant-l
     IndexComponent,
     SidebarComponent,
     ParticipantProfileComponent,
-    ParticipantListComponent
+    ParticipantListComponent,
+    ParticipantBaseComponent
   ],
   imports: [
     BrowserModule,

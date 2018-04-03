@@ -19,6 +19,9 @@ import { AssetBaseComponent } from './components/asset/asset-base/asset-base.com
 // Participants
 import { ParticipantProfileComponent } from './components/participant/participant-profile/participant-profile.component';
 import { ParticipantListComponent } from './components/participant/participant-list/participant-list.component';
+import { ParticipantBaseComponent } from './components/participant/participant-base/participant-base.component';
+
+
 
 
 import { Routes } from '@angular/router';
@@ -47,10 +50,11 @@ export const routes: Routes = [
             }
         ]
     },
+    { path: 'participants', canActivate: [IsAuthenticatedGuard], component: AssetListComponent},
     {
         path: 'participants',
         canActivate: [IsAuthenticatedGuard],
-        component: ParticipantListComponent,
+        component: ParticipantBaseComponent,
         children: [
             {
                 path: ':id',
