@@ -18,7 +18,7 @@
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    min-height: 100vh;
+    height: 100vh;
     background: #3086E9;
     color: white;
     transition: all 0.3s;
@@ -70,15 +70,14 @@
 }
 
 .active {
-    color: #fff;
-    background: green;
+    background: rgb(1, 58, 123);
 }
 
 
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: pink;
+    background: rgb(96, 156, 225);
 }
 
 

@@ -13,23 +13,18 @@
 
         <!-- Sidebar Links -->
         <ul class="list-unstyled components">
-            <li (click)="toggleClass($event)" ><a [routerLink]="['/participants', participant.id]" ><i class="fa fa-user"></i> My profile</a></li>
+            <li (click)="toggleClass($event)"><a [routerLink]="['/participants', participant.id]" ><i class="fa fa-user"></i> My profile</a></li>
             <li (click)="toggleClass($event)"><a [routerLink]="['/participants']" ><i class="fa fa-user"></i> ALL PARTICIPANTS</a></li>
-            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
-            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cubes"></i> Market Place</a></li>
-            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-gavel"></i> Secondary Market</a></li>
-            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-briefcase"></i> My Wallet</a></li>
-
-
-            <li>
-              <a (click)="onClickLogout()">Logout</a>
-            </li>
+            <li (click)="toggleClass($event)"><a [routerLink]="['/assets']" ><i class="fa fa-cubes"></i> Assets</a></li>
+            <li (click)="toggleClass($event)"><a [routerLink]="['/transactions']" ><i class="fa fa-gavel"></i> Market Place</a></li>
+            <li (click)="toggleClass($event)"><a [routerLink]="['/']"><i class="fa fa-cogs"></i> About</a></li>
             
 
             <li><!-- Link with dropdown items -->
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
                 <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                    <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-briefcase"></i> My Wallet</a></li>
                     <li><a href="#"><i class="fab fa-docker"></i> Docker</a></li>
                     <li><a href="#"><i class="fas fa-link"></i> BlockChain</a></li>
                     <li><a href="#">HyperLedger</a></li>
@@ -37,9 +32,9 @@
                     <li><a href="#"><i class="fa fa-chart-line"></i> Stats 1</a></li>
                     <li><a href="#"><i class="fa fa-chart-pie"></i> Stats 2</a></li>
                     <li><a href="#"><i class="fa fa-cc-paypal"></i> PayPal</a></li>
-        
                 </ul>
-
+            </li>
+            <br>
             <li>
               <a (click)="onClickLogout()">Logout</a>
             </li>

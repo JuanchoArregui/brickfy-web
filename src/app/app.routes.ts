@@ -20,7 +20,8 @@ import { AssetBaseComponent } from './components/asset/asset-base/asset-base.com
 import { ParticipantProfileComponent } from './components/participant/participant-profile/participant-profile.component';
 import { ParticipantListComponent } from './components/participant/participant-list/participant-list.component';
 import { ParticipantBaseComponent } from './components/participant/participant-base/participant-base.component';
-
+// Transactions
+import { TransactionListComponent } from './components/transaction/transaction-list/transaction-list.component';
 
 
 
@@ -28,6 +29,19 @@ import { Routes } from '@angular/router';
 
 export const routes: Routes = [
     { path: '', component: IndexComponent},
+    { path: 'participants', canActivate: [IsAuthenticatedGuard], component: ParticipantListComponent},
+    {
+        path: 'participants',
+        canActivate: [IsAuthenticatedGuard],
+        component: ParticipantBaseComponent,
+        children: [
+            {
+                path: ':id',
+                canActivate: [IsAuthenticatedGuard],
+                component: ParticipantProfileComponent
+            }
+        ]
+    },
     { path: 'assets', canActivate: [IsAuthenticatedGuard], component: AssetListComponent},
     {
         path: 'assets',
@@ -50,19 +64,7 @@ export const routes: Routes = [
             }
         ]
     },
-    { path: 'participants', canActivate: [IsAuthenticatedGuard], component: AssetListComponent},
-    {
-        path: 'participants',
-        canActivate: [IsAuthenticatedGuard],
-        component: ParticipantBaseComponent,
-        children: [
-            {
-                path: ':id',
-                canActivate: [IsAuthenticatedGuard],
-                component: ParticipantProfileComponent
-            }
-        ]
-    },
+    { path: 'transactions', canActivate: [IsAuthenticatedGuard], component: TransactionListComponent},
     { path: 'login', component: LoginComponent },
     { path: 'signup', component: SignupComponent },
 ];
