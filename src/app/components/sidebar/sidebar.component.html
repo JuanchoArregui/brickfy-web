@@ -13,19 +13,19 @@
 
         <!-- Sidebar Links -->
         <ul class="list-unstyled components">
-            <li class="active"><a  [routerLink]="['/participants', participant.id]" ><i class="fa fa-user"></i> My profile</a></li>
-            <li><a href="/participants"><i class="fa fa-user"></i> ALL PARTICIPANTS</a></li>
-            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-            <li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
-            <li><a href="#"><i class="fa fa-cubes"></i> Market Place</a></li>
-            <li><a href="#"><i class="fa fa-gavel"></i> Secondary Market</a></li>
-            
-            <li><a href="#"><i class="fa fa-briefcase"></i> My Wallet</a></li>
-           
+            <li (click)="toggleClass($event)" ><a [routerLink]="['/participants', participant.id]" ><i class="fa fa-user"></i> My profile</a></li>
+            <li (click)="toggleClass($event)"><a [routerLink]="['/participants']" ><i class="fa fa-user"></i> ALL PARTICIPANTS</a></li>
+            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
+            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-cubes"></i> Market Place</a></li>
+            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-gavel"></i> Secondary Market</a></li>
+            <li (click)="toggleClass($event)"><a href="#"><i class="fa fa-briefcase"></i> My Wallet</a></li>
+
 
             <li>
               <a (click)="onClickLogout()">Logout</a>
             </li>
+            
 
             <li><!-- Link with dropdown items -->
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>

@@ -18,6 +18,9 @@ export class SidebarComponent implements OnInit, OnDestroy {
     private router: Router,
     private sessionService: SessionService) { }
 
+    // variable to hold boolean value to "active" class
+    isClassActiveVisible = false;
+
   ngOnInit() {
     this.participant = this.sessionService.getParticipant();
     this.participantSubscription = this.sessionService.onParticipantChanges()
@@ -33,6 +36,12 @@ export class SidebarComponent implements OnInit, OnDestroy {
       .subscribe(() => {
         this.router.navigate(['/']);
       });
+  }
+
+  toggleClass(event) {
+    const elementsWithClass = document.getElementsByClassName('active');
+    Object.values(elementsWithClass).forEach(element => { element.classList.remove('active'); });
+    event.target.classList.add('active');
   }
 
 }

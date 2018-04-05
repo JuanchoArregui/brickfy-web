@@ -69,10 +69,12 @@
     background: #fff;
 }
 
-#sidebar ul li.active > a, a[aria-expanded="true"] {
+.active {
     color: #fff;
-    background: pink;
+    background: green;
 }
+
+
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
