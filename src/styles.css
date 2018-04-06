@@ -1,7 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-@import "https://fonts.googleapis.com/css?family=Roboto";
+/* This one of the pre-built themes incluided in Material and that we have already installed */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+
+
+/* @import "https://fonts.googleapis.com/css?family=Roboto";
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -31,4 +38,4 @@ a, a:hover, a:focus {
     padding: 0;
     list-style: none;
     margin: 0;
-}
+} */

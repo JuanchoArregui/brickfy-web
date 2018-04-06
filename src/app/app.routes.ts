@@ -5,7 +5,7 @@ import { IsAuthenticatedGuard } from './shared/guards/is-authenticated.guard';
 // Import Resolvers:
 import { AssetDetailsResolverGuard } from './shared/resolvers/asset-details-resolver.guard';
 
-// Import necessary Components:
+// Import my own Components:
 // index
 import { IndexComponent } from './components/index/index.component';
 // login-signup
