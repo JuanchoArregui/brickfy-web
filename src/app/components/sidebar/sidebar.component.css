@@ -19,7 +19,7 @@
     min-width: 250px;
     max-width: 250px;
     height: 100vh;
-    background: #3086E9;
+    background: rgb(73, 73, 74);
     color: white;
     transition: all 0.3s;
 }
